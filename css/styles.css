@@ -1850,7 +1850,7 @@ p.lead {
 
 @media (min-width:992px) {
     p.lead {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -1947,7 +1947,7 @@ p.lead {
 }
 
 .dev-icons {
-    font-size: 3rem;
+    font-size: 1.9rem;
 }
 
 section.resume-section {
