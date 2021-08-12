@@ -1,1 +1,0 @@
-# SedzaniR.github.io
