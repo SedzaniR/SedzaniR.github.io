@@ -9,6 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
+  font-size:1.2rem!important;
   font-family: "Open Sans", sans-serif;
   color: #272829;
 }
@@ -414,6 +415,7 @@ section {
 }
 
 .skills .progress .skill {
+  justify-content: center;
   padding: 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
@@ -424,8 +426,9 @@ section {
 }
 
 .skills .progress .skill .val {
-  margin-left: 15%;
   font-style: normal;
+  display:grid;
+  justify-self: center!important;
   
 }
 
