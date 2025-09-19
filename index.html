@@ -3,24 +3,187 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wedding Programme — Abigail & Humbulani</title>
+  <title>Abigail & Humbulani</title>
   <meta name="description" content="Wedding programme for Abigail Mafunzwaini & Humbulani Ragau — 11 Oct 2025." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;700&family=Allura:wght@400&family=Noto+Serif+Display:wght@400;700&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body{font-family:Arial,Helvetica,sans-serif;background:#fdfdfd;margin:0;padding:20px;color:#333}
-    .container{max-width:700px;margin:0 auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-    h1,h2{color:#5a2d82}
-    ul{padding-left:18px}
-    .date{background:#eee;display:inline-block;padding:6px 12px;border-radius:20px;margin-bottom:10px}
-    footer{text-align:center;margin-top:20px;font-size:14px;color:#555}
+    body {
+      font-family: 'Lato', Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #f5f5dc 0%, #f4e4bc 100%);
+      margin: 0;
+      padding: 40px 20px;
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fefefe;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      border: 2px solid #ffcc99;
+      position: relative;
+    }
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #ff8c42 0%, #ff6b35 50%, #ff8c42 100%);
+      border-radius: 12px 12px 0 0;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #ff6b35;
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h2 {
+      font-family: 'Allura', cursive;
+      color: #ff8c42;
+      font-size: 2.7em;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #deb887;
+      padding-bottom: 5px;
+      text-align: center;
+      font-style: italic;
+    }
+    p {
+      text-align: center;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+    .names {
+      font-family: 'Noto Serif Display', serif;
+      font-weight: 100;
+      color: #daa520;
+      font-size: 1.5em;
+    }
+    .abbr {
+      font-family: 'Noto Serif Display', serif;
+      font-weight: 100;
+      color: #daa520;
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+    .and-special {
+      font-family: 'Allura', cursive;
+      font-weight: 700;
+      color: #daa520;
+      font-size: 1.4em;
+      font-style: italic;
+    }
+    .date {
+      background: #f4e4bc;
+      color: #8b4513;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin: 20px auto;
+      font-weight: 600;
+      border: 2px solid #deb887;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .calendar {
+      margin: 10px auto 30px;
+      width: 200px;
+      background: #ffffff;
+      padding: 12px;
+      text-align: center;
+    }
+    .month {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      color: #ff6b35;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    .weekdays, .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+    }
+    .weekdays div {
+      font-weight: 600;
+      color: #8b4513;
+      padding: 8px;
+      font-size: 0.9em;
+    }
+    .days div {
+      padding: 10px;
+      font-size: 1em;
+      color: #4a4a4a;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .days div:not(:empty) {
+      cursor: pointer;
+    }
+    .days div:not(:empty):hover {
+      background: #f4e4bc;
+    }
+    .circled {
+      background: #ff8c42 !important;
+      color: white !important;
+      border-radius: 50% !important;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(255, 140, 66, 0.3);
+    }
+    ul {
+      list-style: none;
+      text-align: center;
+      padding-left: 0;
+      margin: 20px 0;
+    }
+    li {
+      font-family: 'DM Sans', sans-serif;
+      margin-bottom: 12px;
+      font-size: 1.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .italic {
+      font-family: 'DM Sans', sans-serif;
+      font-style: italic;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #8b4513;
+      border-top: 1px solid #deb887;
+      padding-top: 20px;
+    }
+    .confetti {
+      position: absolute;
+      bottom: 0;
+      width: 4px;
+      height: 8px;
+      border-radius: 0;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Wedding Programme</h1>
-    <p><strong>Blessing & Humbulani Ragau</strong></p>
-    <p class="date">11 • 10 • 25</p>
+    <h1 class="abbr">H | A</h1>
+    <p class="names"><strong>HUMBULANI RAGAU</strong></p>
+    <p class="and-special"><strong>and</strong></p>
+    <p class="names"><strong>ABIGAIL MAFUNZWAINI</strong></p>
+    <div class="calendar">
+      <div class="month">11.10.2025</div>
+   
+     
+    </div>
 
-    <h2>Ceremony</h2>
+    <h2>Blessing</h2>
     <ul>
       <li>Opening Prayer</li>
       <li>Welcoming of Guests & Purpose of the Day</li>
@@ -46,7 +209,7 @@
 
     <h2>Closing</h2>
     <ul>
-      <li>Vote of Thanks & Announcements</li>
+      <li class="italic">Vote of Thanks & Announcements</li>
       <li>Closure</li>
     </ul>
 
@@ -56,5 +219,68 @@
 
     <footer>© 2025 Abigail & Humbulani — Wedding Programme</footer>
   </div>
+  <script>
+    window.onload = function() {
+      const colors = ['#ff6b35', '#ff8c42', '#ffa500', '#ff4500', '#f5f5dc', '#d2b48c', '#f4e4bc', '#deb887', '#ffcc99', '#daa520', '#cd853f'];
+      
+      // Create confetti from center
+      for (let i = 0; i < 1000; i++) {
+        createConfetti();
+      }
+      
+      function createConfetti() {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        
+        // Random size for confetti-like appearance
+        const width = Math.random() * 4 + 3; // 3-7px
+        const height = Math.random() * 6 + 6; // 6-12px
+        confetti.style.width = width + 'px';
+        confetti.style.height = height + 'px';
+        
+        // Start from center bottom
+        confetti.style.left = '50%';
+        confetti.style.bottom = '0px';
+        
+        // Random rotation
+        const rotation = Math.random() * 360;
+        
+        document.body.appendChild(confetti);
+        
+        // Animate the burst
+        const angle = (Math.random() - 0.5) * 2 * Math.PI; // -180° to 180° for full circular spread
+        const speed = Math.random() * 8 + 3; // Increased speed for higher reach
+        let x = 0;
+        let y = 0;
+        const gravity = 0.02; // Reduced gravity for slower fall and higher coverage
+        let velocityX = Math.cos(angle) * speed;
+        let velocityY = Math.sin(angle) * speed;
+        let opacity = 1;
+        const fadeRate = 0.002; // Slower fade for longer duration
+        
+        const animate = () => {
+          x += velocityX;
+          y += velocityY;
+          velocityY -= gravity; // Add gravity for parabolic motion
+          opacity -= fadeRate;
+          
+          confetti.style.transform = `translate(${x}px, ${-y}px) rotate(${rotation}deg)`;
+          confetti.style.opacity = Math.max(opacity, 0);
+          
+          if (opacity > 0 && confetti.parentNode) {
+            requestAnimationFrame(animate);
+          } else {
+            if (confetti.parentNode) {
+              confetti.parentNode.removeChild(confetti);
+            }
+          }
+        };
+        
+        requestAnimationFrame(animate);
+      }
+    };
+  </script>
 </body>
 </html>
+
