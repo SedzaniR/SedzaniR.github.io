@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Abigail & Humbulani</title>
   <meta name="description" content="Wedding programme for Abigail Mafunzwaini & Humbulani Ragau — 11 Oct 2025." />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;700&family=Allura:wght@400&family=Noto+Serif+Display:wght@400;700&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;700&family=Allura:wght@400&family=Noto+Serif+Display:wght@400;700&family=DM+Sans:wght@400;700&family=Parisienne:wght@400&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Lato', Arial, Helvetica, sans-serif;
@@ -24,16 +24,10 @@
       box-shadow: 0 8px 32px rgba(0,0,0,0.1);
       border: 2px solid #ffcc99;
       position: relative;
-    }
-    .container::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #ff8c42 0%, #ff6b35 50%, #ff8c42 100%);
-      border-radius: 12px 12px 0 0;
+      /* Initial crumpled state */
+      transform: rotate(-15deg) scale(0.8) skew(-5deg, 3deg);
+      opacity: 0.05;
+      animation: ironOut 2s ease-in-out 0.5s forwards;
     }
     h1 {
       font-family: 'Playfair Display', serif;
@@ -44,7 +38,8 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     h2 {
-      font-family: 'Allura', cursive;
+      /*font-family: 'Allura', cursive;*/
+      font-family: 'Parisienne', cursive;
       color: #ff8c42;
       font-size: 2.7em;
       margin-top: 30px;
@@ -60,10 +55,10 @@
       margin: 10px 0;
     }
     .names {
-      font-family: 'Noto Serif Display', serif;
+      font-family: 'Parisienne', cursive;
       font-weight: 100;
-      color: #daa520;
-      font-size: 1.5em;
+      color:  #daa520;
+      font-size: 2.1em;
     }
     .abbr {
       font-family: 'Noto Serif Display', serif;
@@ -99,10 +94,10 @@
     }
     .month {
       font-family: 'Playfair Display', serif;
-      font-size: 1.5em;
+      font-size: 1.1em;
       color: #ff6b35;
       margin-bottom: 15px;
-      font-weight: 700;
+      
     }
     .weekdays, .days {
       display: grid;
@@ -169,14 +164,44 @@
       border-radius: 0;
       pointer-events: none;
     }
+    .balloon {
+      position: absolute;
+      top: -50px;
+      width: 20px;
+      height: 28px;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+    .balloon::before {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 12px;
+      background: rgba(0,0,0,0.3);
+    }
+    
+    @keyframes ironOut {
+      0% {
+        transform: rotate(-15deg) scale(0.8) skew(-5deg, 3deg);
+        opacity: 0.7;
+      }
+      100% {
+        transform: rotate(0deg) scale(1) skew(0deg, 0deg);
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1 class="abbr">H | A</h1>
-    <p class="names"><strong>HUMBULANI RAGAU</strong></p>
-    <p class="and-special"><strong>and</strong></p>
-    <p class="names"><strong>ABIGAIL MAFUNZWAINI</strong></p>
+    <p class="names"><strong>Humbulani Ragau</strong></p>
+    <p class="and-special">💍</p>
+    <p class="names"><strong>Abigail Mafunzwaini</strong></p>
     <div class="calendar">
       <div class="month">11.10.2025</div>
    
@@ -187,22 +212,21 @@
     <ul>
       <li>Opening Prayer</li>
       <li>Welcoming of Guests & Purpose of the Day</li>
-      <li>Handing Over of the Bride</li>
-      <li>Receiving of the Bride</li>
+      <li>Handing Over & Receiving of the Bride</li>
       <li>Blessing</li>
       <li>Closing</li>
-      <li>Refreshments</li>
     </ul>
 
     <h2>Reception</h2>
     <ul>
       <li>Grand Entrance</li>
-      <li>Cutting of the Cake & Toasting</li>
+      
       <li>Opening Prayer</li>
       <li>Words of Encouragement</li>
       <li>Well Wishers: Family Representative, Siblings, Friends, Colleagues</li>
       <li>Welcome to Motherland</li>
       <li>Welcome to Fatherland</li>
+      <li>Cutting of the Cake & Toasting</li>
       <li>Gifting</li>
       <li>Response by the Newlyweds</li>
     </ul>
@@ -213,20 +237,24 @@
       <li>Closure</li>
     </ul>
 
-    <h2>Gratitude</h2>
-    <p>Thank you for joining us today. We cannot thank all of you enough for joining us. 
-       A special thanks to our parents for all their love and support.</p>
-
     <footer>© 2025 Abigail & Humbulani — Wedding Programme</footer>
   </div>
   <script>
     window.onload = function() {
       const colors = ['#ff6b35', '#ff8c42', '#ffa500', '#ff4500', '#f5f5dc', '#d2b48c', '#f4e4bc', '#deb887', '#ffcc99', '#daa520', '#cd853f'];
       
-      // Create confetti from center
-      for (let i = 0; i < 1000; i++) {
-        createConfetti();
-      }
+      // Wait for ironing animation to complete, then start celebrations
+      setTimeout(() => {
+        // Create confetti from center
+        for (let i = 0; i < 1000; i++) {
+          createConfetti();
+        }
+        
+        // Create balloons falling from top
+        for (let i = 0; i < 50; i++) {
+          setTimeout(() => createBalloon(), i * 50); // Stagger balloon creation
+        }
+      }, 3000); // Start celebrations 3 seconds after page load (after smooth ironing completes)
       
       function createConfetti() {
         const confetti = document.createElement('div');
@@ -278,6 +306,52 @@
         };
         
         requestAnimationFrame(animate);
+      }
+      
+      function createBalloon() {
+        const balloon = document.createElement('div');
+        balloon.className = 'balloon';
+        balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        
+        // Random horizontal position - clustered closer together
+        const screenWidth = window.innerWidth;
+        const clusterWidth = screenWidth * 0.6; // Use 60% of screen width for clustering
+        const clusterStart = (screenWidth - clusterWidth) / 2; // Center the cluster
+        const left = clusterStart + (Math.random() * clusterWidth);
+        balloon.style.left = left + 'px';
+        
+        // Random size variation
+        const scale = Math.random() * 0.5 + 0.8; // 0.8 to 1.3
+        balloon.style.transform = `scale(${scale})`;
+        
+        document.body.appendChild(balloon);
+        
+        // Animate the fall
+        let y = -50;
+        const fallSpeed = Math.random() * 7 + 5; // 9-19 pixels per frame (much faster)
+        const sway = Math.random() * 0.5 - 0.25; // Slight horizontal sway
+        let x = 0;
+        let opacity = 0.8;
+        const fadeRate = 0.001;
+        
+        const animateBalloon = () => {
+          y += fallSpeed;
+          x += sway;
+          opacity -= fadeRate;
+          
+          balloon.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+          balloon.style.opacity = Math.max(opacity, 0);
+          
+          if (y < window.innerHeight + 50 && opacity > 0 && balloon.parentNode) {
+            requestAnimationFrame(animateBalloon);
+          } else {
+            if (balloon.parentNode) {
+              balloon.parentNode.removeChild(balloon);
+            }
+          }
+        };
+        
+        requestAnimationFrame(animateBalloon);
       }
     };
   </script>
