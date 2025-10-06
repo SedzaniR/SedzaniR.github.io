@@ -15,11 +15,13 @@
       color: #4a4a4a;
       line-height: 1.6;
     }
+  
     .container {
       max-width: 800px;
       margin: 0 auto;
-      background: #fefefe;
-      padding: 40px;
+      background: white;
+      /* background: linear-gradient(135deg, #f5f5dc 0%, #f4e4bc 100%); */
+     
       border-radius: 12px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.1);
       border: 2px solid #ffcc99;
@@ -88,7 +90,6 @@
     .calendar {
       margin: 10px auto 30px;
       width: 200px;
-      background: #ffffff;
       padding: 12px;
       text-align: center;
     }
@@ -194,6 +195,40 @@
         opacity: 1;
       }
     }
+    .item-doer {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1em;
+      color:  #daa520;
+      margin-top: 2px;
+      margin-bottom: 8px;
+      letter-spacing: 0.01em;
+      font-style: italic;
+      font-weight: 500;
+      text-transform: none !important;
+    }
+    .sublist {
+      margin: 10px 0 0 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .sublist li {
+      margin-bottom: 8px;
+      font-size: 1em;
+      text-align: left;
+    }
+    .item-doer-list {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1em;
+      color:  #daa520;
+      margin-top: 0.5em;
+  margin-bottom: 0.2em;
+      letter-spacing: 0.01em;
+      font-style: italic;
+      font-weight: 500;
+      text-transform: none !important;
+    }
   </style>
 </head>
 <body>
@@ -210,31 +245,81 @@
 
     <h2>Blessing</h2>
     <ul>
-      <li>Opening Prayer</li>
-      <li>Welcoming of Guests & Purpose of the Day</li>
-      <li>Handing Over & Receiving of the Bride</li>
-      <li>Blessing</li>
-      <li>Closing</li>
+      <li>
+        Opening Prayer<br>
+        <span class="item-doer">Pastor N. Mukumela</span>
+      </li>
+      <li>
+        Welcoming of Guests & Purpose of the Day<br>
+        <span class="item-doer">Mr M. Ralineba</span>
+      </li>
+      <li>
+        Handing Over & Receiving of the Bride<br>
+        <span class="item-doer">Mr T. Tshikalange & Mrs L. Matodzi</span>
+      </li>
+      <li>
+        Blessing<br>
+        <span class="item-doer">Bishop M. Tshikovhi</span>
+      </li>
+      <li>
+        Closing<br>
+        <span class="item-doer">Pastor N. Mukumela</span>
+      </li>
     </ul>
 
     <h2>Reception</h2>
     <ul>
-      <li>Grand Entrance</li>
+    <li>
+        Grand Entrance
+      </li>
+      <li>Opening
+      <br>
+            <span class="item-doer">Pastor N Mukumela</span>
+      <li>
+        Words of Encouragement<br>
+        <span class="item-doer">Pastor N. Mposhomali</span>
+      </li>
+      <li>
+        Well Wishers
       
-      <li>Opening Prayer</li>
-      <li>Words of Encouragement</li>
-      <li>Well Wishers: Family Representative, Siblings, Friends, Colleagues</li>
-      <li>You are Now A Wife</li>
-      <li>You are Now A Husband</li>
-      <li>Cutting of the Cake & Toasting</li>
-      <li>Gifting</li>
-      <li>Response by the Newlyweds</li>
+        
+            <br>
+            <span class="item-doer-list">Family: Mr R.S. Ramaleba & Pastor Ramulodi</span>
+         
+         
+           
+            <span class="item-doer-list">Siblings: Mrs T.R. Ramaleba & Tshililo Mafunzwaini</span>
+          
+            <span class="item-doer-list">Friends: K. Chabalala & Livhuwani Siriba</span>
+          
+      </li>
+      <li>
+        You are Now A Wife<br>
+        <span class="item-doer">Mrs T. Mmbi</span>
+      </li>
+     <li>
+        You are Now A Husband<br>
+        <span class="item-doer">Mr H. Ramusetheli</span>
+      </li>
+      <li>
+        Cutting of the Cake & Toasting<br>
+        <span class="item-doer">Mrs S.B. Maranda</span>
+      </li>
+      <li>
+        Gifting<br>
+        <span class="item-doer">M.C</span>
+      </li>
+      <li>
+        Response by the Newlyweds<br>
+        <span class="item-doer">Mr & Mrs Ragau</span>
+      </li>
     </ul>
-
     <h2>Closing</h2>
     <ul>
-      <li class="italic">Vote of Thanks & Announcements</li>
+      <li class="">Vote of Thanks & Announcements<br><span class="item-doer">Mrs TR Ramaleba</span></li>
+        
       <li>Closure</li>
+      <span class="item-doer">Pastor N Mukumela</span>
     </ul>
 
     <footer>© 2025 Abigail & Humbulani — Wedding Programme</footer>
